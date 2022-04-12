@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Myungwoo Shim </title>
+    <link rel='stylesheet' href='normalize.css' type='text/css' media='screen'>
+    <script src = 'product.js'> </script>
+</head>
+
+<div class = "contents">  
+    <header>
+        <img src = "logo.png" alt = "seneca">
+        <h1> WEB222NDD Final Project - Product</h1>
+        <p id="paragraph2"> Please fill in the information as per below. You must fill in all fields in order to submit.<br></p>
+    </header>
+</div>
+    <main>
+        <p>1. Please enter the Product ID (Note: Eight numeric digits) <input type="text" name="ProductID" id="ProductID" maxlength = "8"> </p>
+        <p>2. Please provide product description in your own word (Note: 20+ alphabetic characters only)</p>
+        <input type="text" size="90" minlength="20" name="ProductDescription" id="ProductDescription" required><br>  
+        <p>3. Please provide the price (Note: No decimals, less than 1000) <input type="number" min="0" max="999" name="Price" id="Price" required/></p>
+        <p>4. Please provide Supplier Username (Note: Must start with alphabet, at least 6 characters) <input type="text" minlength ="6" name="SupplierUsername" id="SupplierUsername" required></p>
+        <p>5. Please select one or more applicable Supplier Status (Note: select at lease one): </p>
+            <input type="checkbox" name="status1" id="status1" value="NewSupplier">New Supplier <br>
+            <input type="checkbox" name="status2" id="status2" value="ContractSigned">Contract Signed <br>
+            <input type="checkbox" name="status3" id="status3" value="QualityTested">Quality Tested <br>        
+        <p>6. Please provide Supplier Email</p>
+        <input type="email" name="email" id="email" required><br>
+
+        <input type="hidden" name = "lastName" id="lastName", value="Shim">
+        <input type="hidden" name = "studentID" id="studentID", value="132660218">
+        <input type="submit" name="submit" id="submit" value="Submit">
+        <input type="reset" name="reset" id="reset" value="Clear">
+        <br>
+    </main>
+
+    <div id = "section2">
+        <br>
+        <a href="honesty.html"> Home </a> <br> 
+        <a href="product.html"> Product </a> <br> 
+        <a href="reflection.html"> Reflection </a> <br> <br>
+    </div>
+
+    <footer> Copyright © 2022 - written by Myungwoo Shim <br>
+        <a href="https://github.com/Shimda2/WEB222/tree/main/Final%20Project"> Github </a>
+    </footer>
+    </html>
