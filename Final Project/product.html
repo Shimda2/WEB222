@@ -8,17 +8,19 @@
 <body>
     <div class = "contents">  
         <header>
-            <img src = "logo.png" alt = "seneca">
-            <h1> Product</h1>
+            <div class = "header">
+                <img src = "logo.png" alt = "seneca">
+                <h1> Product</h1>
+            </div>
             <p id="paragraph2"> Please fill in the information as per below. You must fill in all fields in order to submit.<br></p>
         </header>
     </div>
-        <form action="https://httpbin.org/post" action = "signup">
-            <p>1. Please enter the Product ID (Note: Eight numeric digits) <input type="text" maxlength = "8" required> </p>
+    <form id='product' name='product' method='post' action='https://httpbin.org/post' onsubmit= 'return ValidateInput()'>
+            <p>1. Please enter the Product ID (Note: Eight numeric digits) <input type="text" id = "productID" maxlength = "8" required> </p>
             <p>2. Please provide product description in your own word (Note: 20+ alphabetic characters only)</p>
-            <input type="text" size="90" minlength="20" required><br>  
+            <input type="text" size="90" minlength="20" id = "description" required><br>  
             <p>3. Please provide the price (Note: No decimals, less than 1000) <input type="number" min="0" max="999" name="Price" id="Price" required/></p>
-            <p>4. Please provide Supplier Username (Note: Must start with alphabet, at least 6 characters) <input type="text" minlength ="6" required></p>
+            <p>4. Please provide Supplier Username (Note: Must start with alphabet, at least 6 characters) <input type="text" minlength ="6" id = "supplier" required></p>
             <p>5. Please select one or more applicable Supplier Status (Note: select at lease one): </p>
                 <input type="checkbox" value="NewSupplier">New Supplier <br>
                 <input type="checkbox" value="ContractSigned">Contract Signed <br>
@@ -27,7 +29,7 @@
             <input type="email" name="email" id="email" required><br>
             <input type="hidden" name = "lastName" id="lastName", value="Shim">
             <input type="hidden" name = "studentID" id="studentID", value="132660218">
-            <input type="submit" value="Submit">&nbsp;&nbsp;
+            <input type="submit" value="Submit" >&nbsp;&nbsp;
             <input type="reset" value="Clear">
             <br>
         </form>
@@ -43,7 +45,7 @@
 
 <aside>
     <div id="errorlist">
-    <h2>Errors</h2>
+    <h2 hidden>Errors</h2>
        <p id="error_1" hidden>Please enter numbers only on Product ID</p>
        <p id="error_2" hidden>Please enter 8 digits on Product ID</p>
        <p id="error_3" hidden>The product description must start with capital letter</p>
@@ -53,15 +55,6 @@
        <p id="error_7" hidden>Select at least one of the checkboxes.</p>
     </div>
 </aside>
-<div class="required">
-    <h1>Requirements:</h1>
-    <p>Product ID: Digit only and 8 characters long</p>
-    <p>Product Description: Must start with a capital letter and only alphabet allowed. Must contain at least 20 characters.</p>
-    <p>Price: Digit only, decimal not allowed. Less than 1000.</p>
-    <p>Supplier Username: Must start with an alphabet, must have at least 6 characters.</p>
-    <p>Supplier Status: Must select at least one of the check boxes.</p>
-</div>
-
 
     <footer> Copyright © 2022 - written by Myungwoo Shim <br>
         <a href="https://github.com/Shimda2/WEB222/tree/main/Final%20Project"> Github </a>
